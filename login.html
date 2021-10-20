@@ -1,0 +1,220 @@
+<!DOCTYPLE html>
+<html>
+<head>
+<title>Login</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+
+
+.logincard
+{
+  border-radius: 0px;
+  box-shadow: maroon 1px 1px 10px -5px;
+  padding: 0px;
+}
+
+.logincard h3
+{
+  padding-bottom: 20px;
+}
+
+.logincard span
+{
+  font-size: 15px;
+}
+
+.uname
+{
+  margin-top: 20px;
+}
+
+.logincard div
+{
+  padding-top: 10px;
+}
+
+.submitbtnl
+{
+  background-image: linear-gradient(to right, rgb(135, 206, 235),rgb(105, 185, 245), rgb(135, 206, 235));
+  color: white;
+  font-size: 17px;
+  width: 100px;
+  margin-top: -5px;
+  z-index: 2;
+  position: absolute;
+}
+
+.submitbtnl1
+{
+  background-image: linear-gradient(to right, rgb(135, 206, 235),rgb(105, 185, 245), rgb(135, 206, 235));
+  color: black;
+  font-size: 17px;
+  width: 100px;
+  margin-left: 0px;
+  margin-top: -5px;
+  position: absolute;
+  display: none;
+  z-index: 3;
+  padding-top: 11.5px;
+}
+
+.submitbtnl1:hover
+{
+  background-image: linear-gradient(to right, rgb(135, 206, 235),rgb(105, 185, 245), rgb(135, 206, 235));
+  color: black;
+}
+
+.ani
+{
+  height: 50px;
+  background: white;
+  z-index: 1;
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 2  %;
+}
+
+.pswl
+{
+  margin-bottom: 21px;
+}
+
+.fa-spin
+{
+  /*display: none;*/
+  font-size: 23px;
+  margin-right: 20px;
+  margin-left: -130px;
+  margin-top: 6.5px;
+}
+
+.loginbg
+{
+  /*background: #f9f9f9;*/
+  /*background-image: linear-gradient(to right, #f9f9f9 600px, white 500px);*/
+  height: 100%;
+  overflow: auto;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  overflow: auto;
+}
+
+.loginlogo
+{
+  background-image: linear-gradient(to right, rgb(135, 206, 235),rgb(105, 185, 245), rgb(135, 206, 235));
+  height: 550px;
+}
+
+@media only screen and (max-width: 767.5px)
+{
+  .loginlogo
+{
+  display: none;
+}
+
+@media only screen and (max-width: 768px)
+{
+  .logincard
+{
+  width: 420px !important;
+  margin: auto;
+}
+}
+}
+
+.form
+{
+  padding: 50px 150px;
+  padding-top: 80px !important;
+}
+
+@media only screen and (max-width: 1366px)
+{
+  .form
+{
+  padding: 50px 140px;
+  padding-top: 80px !important;
+}
+}
+
+@media only screen and (max-width: 950px)
+{
+  .form
+{
+  padding: 50px 120px;
+  padding-top: 80px !important;
+}
+}
+
+@media only screen and (max-width: 768px)
+{
+  .form
+{
+  padding: 70px 50px;
+  padding-top: 50px !important;
+}
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="loginbg col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+  <div class="logincard col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+  <div class="loginlogo col-lg-4 col-md-4 col-sm-4">
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+      <svg width="100" height="100">
+  <img src="ship2way1.png" style="height :58.5px; margin-top: 110px; margin-left: -30px;" >
+</svg>
+    </div>
+  </div>
+
+  <div class="col-lg-8 col-md-8 col-sm-8 form">
+    <center>
+      <h3>My Account</h3>
+      <span>Log in to manage your Account</span>
+    </center>
+  <form action="">
+<div class="form-group" style="display: inline-flex;">
+<input type="tel" placeholder="Enter Mobile Number" class="uname input-lg form-control">
+<button name="" class="btn btn-success input-lg" style="margin-top: 20px; margin-left: 24px;">Send OTP</button>
+</div>
+<div class="form-group">
+<input type="text" placeholder="Enter OTP" class="input-lg form-control pswl"><span>Didn't recieve code?</span> <a href="#" style="float: right;">Resend OTP</a>
+</div>
+<div class="form-group">
+<center>
+  <!-- <i class="fa fa-circle-o-notch fa-spin loader" aria-hidden="true"></i> -->
+  <i class="fa fa-refresh fa-spin" aria-hidden="true"></i>
+  <div class="ani col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+  <input type="button" value="Verify" class="input-lg btn submitbtnl">
+  <span class="input-lg btn submitbtnl1">loading..</span>
+</center>
+  </div>
+    
+</div>
+  </form>
+</div>
+
+<script>
+$(document).ready(function(){
+  $(".submitbtnl").click(function(){
+    $(".ani").hide();
+    $(".submitbtnl1").show();
+  });
+});
+</script>
+  
+</div>
+
+</body>
+</html>
