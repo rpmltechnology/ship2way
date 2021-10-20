@@ -1,0 +1,473 @@
+<!DOCTYPLE html>
+<html>
+<head>
+<title>Awaiting Shipment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="../ShipStation.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-default n1">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Onboard.html"><svg width="100" height="100">
+  <img src="../ship2way1.png" style="height :58.5px; margin-top: -123.5px; margin-left: -15px;" >
+</svg></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navb navbar-nav navbar-right">
+        <li class="nl"><a href="../Onboard.html">Onboard</a></li>
+<li class="nl"><a href="../Insights/overview.html">Insights</a></li>
+<li class="nl"><a href="awaiting_payment.html">Orders</a></li>
+<li class="nl"><a href="../Shipments/shipped.html">Shipments</a></li>
+<li class="nlprodct"><a href="../Products/products.html">Online Shopping Portal</a></li>
+<li class="nlcustomers"><a href="#">Customers</a></li>
+<li class="nlscan"><a href="#">Scan</a></li>
+<li class="dropdown nlmore">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">More <span class="caret"></span></a>
+          <ul class="drpd dropdown-menu">
+            <li class="nlprodctli"><a href="../Products/products.html">Online Shopping Portal</a></li>
+            <li class="nlcustomersli"><a href="#">Customers</a></li>
+            <li class="nl"><a href="#">Scan</a></li>
+          </ul>
+        </li>
+        <li class="nl"><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="listsOrder col-lg-2">
+  <ul class="list-group" id="myList">
+  <input class="search form-control" id="myInput" type="text" placeholder="Search..">
+
+    <li class="list-group-item"><a href="awaiting_payment.html"><i class="fa fa-credit-card" aria-hidden="true"></i> Awaiting Payment</a> <span class="caret c1"></span></li>
+    <a class="mordercss" href="manual_orders.html"><li class="list-group-item mOrder1" style="display: none;"><i class="fa fa-cog" aria-hidden="true"></i> Manual Orders</li></a>
+
+    <li class="list-group-item"><a href="on_hold.html"><i class="fa fa-hand-paper-o" aria-hidden="true"></i> On Hold</a> <span class="caret c2"></span></li>
+    <a class="mordercss" href="manual_orders.html"><li class="list-group-item mOrder2" style="display: none;"><i class="fa fa-cog" aria-hidden="true"></i> Manual Orders</li></a>
+
+    <li class="list-group-item"><a href="awaiting_shipment.html"><i class="fa fa-truck" aria-hidden="true"></i> Awaiting Shipment</a> <span class="caret c3"></span></li>
+    <a class="mordercss" href="manual_orders.html"><li class="list-group-item mOrder3" style="display: none;"><i class="fa fa-cog" aria-hidden="true"></i> Manual Orders</li></a>
+
+    <li class="list-group-item"><a href="shipped.html"><i class="fa fa-check-square" aria-hidden="true"></i> Shipped</a> <span class="caret c4"></span></li>
+    <a class="mordercss" href="manual_orders.html"><li class="list-group-item mOrder4" style="display: none;"><i class="fa fa-cog" aria-hidden="true"></i> Manual Orders</li></a>
+
+    <li class="list-group-item"><a href="Cancelled.html"><i class="fa fa-times" aria-hidden="true"></i> Cancelled</a> <span class="caret c5"></span></li>
+    <a class="mordercss" href="manual_orders.html"><li class="list-group-item mOrder5" style="display: none;"><i class="fa fa-cog" aria-hidden="true"></i> Manual Orders</li></a>
+
+    <li class="list-group-item"><a href="order_alert.html"><i class="fa fa-bell" aria-hidden="true"></i> Order Alerts</a> <span class="caret c6"></span></li>
+    <a class="mordercss" href="manual_orders.html"><li class="list-group-item mOrder6" style="display: none;"><i class="fa fa-cog" aria-hidden="true"></i> Manual Orders</li></a>
+
+
+<script>
+$(document).ready(function(){
+  $(".c1").click(function(){
+    $(".mOrder1").toggle();
+  });
+  $(".c2").click(function(){
+    $(".mOrder2").toggle();
+  });
+  $(".c3").click(function(){
+    $(".mOrder3").toggle();
+  });
+  $(".c4").click(function(){
+    $(".mOrder4").toggle();
+  });
+  $(".c5").click(function(){
+    $(".mOrder5").toggle();
+  });
+  $(".c6").click(function(){
+    $(".mOrder6").toggle();
+  });
+});
+</script>
+
+  </ul>  
+</div>
+
+<div class="main col-lg-10">
+  <div>
+
+    <span><b style="font-size: 18px; line-height: 45px;">Awaiting Shipment :: All Orders</b> (<a href="">Reload</a>)
+      <div class="btn-group" style="float: right; margin-top: 7.5px;">
+  <button class="btn btn-default" type="button" data-toggle="modal" data-target="#">Layout <span class="caret"></span></a></button>
+  <button class="btn btn-default" type="button" data-toggle="modal" data-target="#clm">Columns <span class="caret"></span></a></button>
+  <button class="btn btn-default" type="button" data-toggle="modal" data-target="#">Group by <span class="caret"></span></a></button>
+  </div>
+  <div id="clm" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal">x</button>
+<h4 class="modal-title"> Manage Columns</h4>
+</div>
+<div class="modal-body">
+
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Alert</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>SKU</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Name</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Warehouse Name</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Warehouse Location</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>On Hand</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Allocated</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Available</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Active</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Parent SKU</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Recorder Threshold</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Tracked</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Product Type</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Actions</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  
+</div>
+<div class="modal-footer">
+<button class="btn btn-success btn-sm" data-dismiss="modal">Cancel</button>
+<button class="btn btn-primary btn-sm" data-dismiss="modal">Save Columns</button>
+</div>
+</div>
+</div>
+</div>
+
+    </span>
+    
+  </div>
+
+  <div>
+
+    <div class="btn-group">
+      <button class="btn btn-success">Create Label</button>
+      <button class="btn btn-success" style="padding: 9px 7px;"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Print
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-primary" type="button" data-toggle="dropdown">New Order</button>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Tag
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Assign
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-primary" type="button" data-toggle="dropdown">Update Rates</button>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Hold
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Other Actions
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle disabled" type="button" data-toggle="dropdown">Allocation
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+    
+  </div>
+
+  <div class="catdropdown">
+
+  <div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Store
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li><a href="#">fff</a></li>
+  </ul>
+</div>
+
+  <div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Destination
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li><a href="#">fff</a></li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Assignee
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li><a href="#">fff</a></li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Tag
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li><a href="#">fff</a></li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Allocation Status
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li><a href="#">fff</a></li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Order Date
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li><a href="#">fff</a></li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Other
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li><a href="#">fff</a></li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Saved Filters
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li><a href="#">fff</a></li>
+  </ul>
+</div>
+
+<div class="checkbox" style="float: right;">
+  <label><input type="checkbox" id="sSidebar" checked>Show Sidebar</label>
+  <script type="text/javascript">
+    $(document).ready(function(){
+  $("#sSidebar").click(function(){
+    $(".tablesidebar").addClass("dnone");
+    $(".datatable").addClass("twidth");
+  });
+});
+  </script>
+</div>
+      
+    </div>
+
+    <div class="datatable">
+
+      <div class="table-responsive">
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th><input class="thcheckbox" type="checkbox" value=""></th>
+        <th><b>Order # <span class="caret"></span></b></th>
+        <th>Store</th>
+        <th>Recipient</th>
+        <th>Qty</th>
+        <th>Rate</th>
+        <th>Requested Service</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" value=""></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+      
+    </div>
+
+    <div class="tablesidebar">
+
+      <div style="padding: 8px 10px; background: cyan; margin-top: -5px;">
+        <span><b style="font-size: 17px;"><i class="fa fa-cog" aria-hidden="true"></i> 4574161</b>
+          <div class="dropdown" style="float: right; border-left: 1px solid grey; padding-left: 10px;">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown"><b>Batch</b>
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li><a href="#">fff</a></li>
+  </ul>
+</div>
+<div class="dropdown" style="float: right; padding: 0px 10px;">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown"><b>Print</b>
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li><a href="#">fff</a></li>
+  </ul>
+</div>
+        </span>
+      </div>
+
+      <div>
+        <div style="border-bottom: 1px solid grey; border-top: 1px solid grey; padding: 5px 10px;" data-toggle="collapse" data-target="#shipping"><b><span class="glyphicon glyphicon-menu-right"></span> SHIPPING
+          <div class="dropdown" style="float: right;">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Apply Preset
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li><a href="#">fff</a></li>
+  </ul>
+</div></b>
+        </div>
+  <div id="shipping" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+      </div>
+
+      <div>
+        <div style="border-bottom: 1px solid grey; border-top: 1px solid grey; padding: 5px 10px;" data-toggle="collapse" data-target="#demo"><b><span class="glyphicon glyphicon-menu-right"></span> ITEM(S) ORDERED</b></div>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+      </div>
+
+      <div>
+        <div style="border-bottom: 1px solid grey; border-top: 1px solid grey; padding: 5px 10px;" data-toggle="collapse" data-target="#demo"><b><span class="glyphicon glyphicon-menu-right"></span> CUSTOMERS</b></div>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+      </div>
+
+      <div>
+        <div style="border-bottom: 1px solid grey; border-top: 1px solid grey; padding: 5px 10px;" data-toggle="collapse" data-target="#demo"><b><span class="glyphicon glyphicon-menu-right"></span> NOTES</b></div>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+      </div>
+
+      <div>
+        <div style="border-bottom: 1px solid grey; border-top: 1px solid grey; padding: 5px 10px;" data-toggle="collapse" data-target="#demo"><b><span class="glyphicon glyphicon-menu-right"></span> SUMMARY</b></div>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+      </div>
+
+      <div>
+        <div style="border-bottom: 1px solid grey; border-top: 1px solid grey; padding: 5px 10px;" data-toggle="collapse" data-target="#demo"><b><span class="glyphicon glyphicon-menu-right"></span> TAGS</b></div>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+      </div>
+
+      <div>
+        <div style="border-bottom: 1px solid grey; border-top: 1px solid grey; padding: 5px 10px;" data-toggle="collapse" data-target="#demo"><b><span class="glyphicon glyphicon-menu-right"></span> CUSTOMS</b></div>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+      </div>
+      
+    </div>
+
+</div>
+
+</body>
+</html>
