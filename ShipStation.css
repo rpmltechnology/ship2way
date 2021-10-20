@@ -1,0 +1,609 @@
+body
+{
+	font-family: Yu Gothic UI;
+}
+
+/*navbar*/
+.n1								
+{
+	/*background-image: linear-gradient(to right, rgb(135, 206, 235),rgb(105, 185, 245), rgb(135, 206, 235));*/
+	background: black;
+	border-radius:0px;
+	border:0px;
+	margin-bottom: 0px;
+	box-shadow: maroon 0px 0px 18px -7px;
+}
+
+.navbar-brand	
+{
+	color: white !important;
+	font-weight: bold;
+	font-size: 21px;
+	font-style: italic;
+	text-decoration: none;
+}
+
+.fa-sign-out
+{
+	font-size: 22px;
+}
+
+@media only screen and (min-width: 1050px)
+{
+	.nav .nlmore
+	{
+		display: none;
+}
+}
+
+@media only screen and (max-width: 767px)
+{
+	.nav .nlmore
+	{
+		display: none;
+}
+}
+
+@media only screen and (max-width: 1050px)
+{
+	.nav .nlscan
+	{
+		display: none;
+}
+}
+
+@media only screen and (max-width: 767px)
+{
+	.nav .nlscan
+	{
+		display: block;
+}
+}
+
+@media only screen and (max-width: 1030px)
+{
+	.nav .nlcustomers
+	{
+		display: none;
+}
+}
+
+@media only screen and (max-width: 767px)
+{
+	.nav .nlcustomers
+	{
+		display: block;
+}
+}
+
+@media only screen and (min-width: 1030px)
+{
+	.nav .nlcustomersli
+	{
+		display: none;
+}
+}
+
+@media only screen and (max-width: 950px)
+{
+	.nav .nlprodct
+	{
+		display: none;
+}
+}
+
+@media only screen and (max-width: 767px)
+{
+	.nav .nlprodct
+	{
+		display: block;
+}
+}
+
+@media only screen and (min-width: 950px)
+{
+	.nav .nlprodctli
+	{
+		display: none;
+}
+}
+
+.navb
+{
+	margin-left: -5px;
+}
+
+.navb li a
+{
+	color: white !important;
+	font-weight: bold;
+	font-size: 15px;
+	padding-left: 12.5px;
+	padding-right: 12.5px;
+}
+
+.navb .nlmore
+{
+	margin-right: 60px;
+}
+
+.navb .nlscan
+{
+	margin-right: 60px;
+}
+
+.navb li a:hover
+{
+	/*background: rgb(290, 205, 255) !important;*/
+	color: #f2541c !important;
+}
+
+.navb li a:focus
+{
+	/*background: rgb(290, 205, 255) !important;*/
+	color: #f2541c !important;
+	background: black !important;
+}
+
+.navbar-toggle:hover
+{
+  background: transparent !important;
+  border: 1px solid black;
+}
+
+.navbar-toggle:focus
+{
+  background: transparent !important;
+}
+
+.drpd
+{
+	/*background: rgb(135, 192, 235);*/
+	background: black;
+}
+
+.drpd li a:hover
+{
+	/*background: rgb(135, 192, 235);*/
+	background: black;
+}
+
+/*Onboard*/
+
+.onboardbg
+{
+	height: 100%;
+	position: fixed;
+	width: 100%;
+	overflow: auto;
+	/*background: cyan;*/
+	padding-bottom: 70px;
+}
+
+.onboardcardbg .col-lg-6
+{
+	padding-top: 29px;
+}
+
+.onboardcard
+{
+	background: white;
+	box-shadow: maroon 1px 1px 9px -5px;
+	border-radius: 9px;
+	height: 250px;
+	overflow: auto;
+	padding: 20px 40px;
+}
+
+@media only screen and (max-width: 1200px)
+{
+	.onboardcard
+	{
+	height: 270px;
+	padding: 20px 10px;
+}
+}
+
+@media only screen and (max-width: 990px)
+{
+	.onboardcard
+	{
+	height: 270px;
+	padding: 20px 40px;
+}
+}
+
+.onboardcard button
+{
+	color: white;
+	font-weight: bold;
+	width: 180px;
+	border: 1px solid skyblue;
+	/*background-image: linear-gradient(to right, rgb(135, 206, 235),rgb(105, 185, 245), rgb(135, 206, 235));*/
+	background: black;
+}
+
+.onboardcard button:hover
+{
+	/*background: rgb(290, 205, 255) !important;*/
+	color: #f2541c;
+}
+
+.onboardcard button:focus
+{
+	/*background: rgb(290, 205, 255) !important;*/
+	color: #f2541c;
+}
+
+.onboardcard span
+{
+	color: #0d0d0d;
+	font-size: 18.5px;
+}
+
+/*.listsO ul li
+{
+	padding-bottom: 115px;
+	border: 0px;
+}
+
+@media only screen and (max-width: 950px)
+{
+	.listsO ul li
+	{
+	padding-bottom: 150px;
+}
+}
+
+@media only screen and (max-width: 768px)
+{
+	.listsO ul li
+	{
+	padding-bottom: 190px;
+}
+}
+
+@media only screen and (max-width: 550px)
+{
+	.listsO ul li
+	{
+	padding-bottom: 235px;
+}
+}
+
+.listsO ul li .btn
+{
+	margin-top: 16px;
+	color: white;
+	font-weight: bold;
+	padding: 8px 20px;
+	border: 1px solid skyblue;
+	background-image: linear-gradient(to right, rgb(135, 206, 235),rgb(105, 185, 245), rgb(135, 206, 235));
+}
+
+.listsO ul li .btn:hover
+{
+	/*background: rgb(290, 205, 255) !important;*/
+	color: #f2541c;
+}
+
+@media only screen and (max-width: 1366px)
+{
+	.listsO ul li .btn
+	{
+		margin-top: 23px;
+}
+}
+
+.listsO ul li p
+{
+	margin-left: 85px;
+	margin-top: -85px;
+}
+
+.glyph
+{
+	font-size: 50px;
+	margin-bottom: -30px;
+	margin-top: 10px;
+	color: green;
+}
+
+.sp
+{
+	color: #0d0d0d;
+	font-size: 18.5px;
+}*/
+
+.main
+{
+	margin: 0px !important;
+	padding-top: 15px;
+	height: 100%;
+}
+
+/*Insights*/
+.listsOvr
+{
+	background-image: linear-gradient(to left, rgb(135, 206, 235),rgb(105, 185, 245), rgb(135, 206, 235));
+	margin: 0px !important;
+	height: 100%
+}
+
+@media only screen and (max-width: 1200px)
+{
+	.listsOvr
+	{
+	height: 306px;
+}
+}
+
+.listsOvr ul li
+{
+  background: transparent;
+  color: white;
+  border: 0px solid black;
+  font-size: 15px;
+  margin: 0px !important;
+}
+
+.listsOvr ul li:hover
+{
+  /*background: rgb(290, 205, 255);*/
+  background: white;
+  color: black;
+}
+
+.listsOvr ul a
+{
+	text-decoration: none;
+}
+
+.listsOvr ul li a
+{
+  color: white;
+  border: 0px solid black;
+  font-size: 15px;
+  margin: 0px !important;
+  text-decoration: none;
+}
+
+.listsOvr ul
+{
+	padding-top: 8px;
+}
+
+/*Orders*/
+.dropdown
+{
+	display: inline-block;
+}
+
+.main button
+{
+	margin-bottom: 10px !important;
+}
+
+.modal-header
+{
+	background: skyblue;
+}
+
+.modal-footer
+{
+	background: skyblue;
+}
+
+.modal-body
+{
+	background: #eeeeee;
+}
+
+.close
+{
+	color: red !important;
+}
+
+.table-responsive
+{
+	margin-top: 8px;
+}
+
+.thcheckbox
+{
+	margin-bottom: 6px !important;
+}
+
+.listsOrder
+{
+	background-image: linear-gradient(to left, rgb(135, 206, 235),rgb(105, 185, 245), rgb(135, 206, 235));
+	margin: 0px !important;
+	height: 100%
+}
+
+@media only screen and (max-width: 1200px)
+{
+	.listsOrder
+	{
+	height: 343px;
+}
+}
+
+.listsOrder ul li
+{
+  background: transparent;
+  color: white;
+  border: 0px solid black;
+  font-size: 15px;
+  margin: 0px !important;
+  /*padding: 10px 15px;*/
+  width: 100%;
+}
+
+.listsOrder ul li:hover
+{
+  /*background: rgb(290, 205, 255);*/
+  background: white;
+  color: black;
+  /*padding: 10px 15px;*/
+}
+
+.listsOrder ul li:hover a
+{
+  /*background: rgb(290, 205, 255);*/
+  background: white;
+  color: black;
+  /*padding: 10px 0px;*/
+}
+
+.listsOrder ul li a
+{
+  color: white;
+  border: 0px solid black;
+  font-size: 15px;
+  margin: 0px !important;
+  text-decoration: none;
+  /*width: 100%;*/
+}
+
+.listsOrder ul
+{
+	padding-top: 8px;
+}
+
+.mordercss:hover
+{
+	text-decoration: none;
+}
+
+.mordercss li
+{
+	padding-left: 25px;
+}
+
+.datatable
+{
+	/*background: green;*/
+	height: 602px;
+	width: 65%;
+	position: absolute;
+	overflow: auto;
+	padding-right: 15px;
+	border-top: 1px solid grey;
+}
+
+.tablesidebar
+{
+	/*background: yellow;*/
+	border-left: 1px solid grey;
+	height: 602px;
+	width: 32.5%;
+	margin-left: 65%;
+	position: absolute;
+	overflow: auto;
+	border-top: 1px solid grey;
+	padding: 5px 0px;
+}
+
+.dnone
+{
+	display: none;
+}
+
+.twidth
+{
+	width: 97.5%;
+	padding-right: 0px;
+}
+
+/*Pruducts*/
+.listsPrdct
+{
+	background-image: linear-gradient(to left, rgb(135, 206, 235),rgb(105, 185, 245), rgb(135, 206, 235));
+	margin: 0px !important;
+	height: 100%
+}
+
+@media only screen and (max-width: 1200px)
+{
+	.listsPrdct
+	{
+	height: 223px;
+}
+}
+
+.search
+{
+	margin-bottom: 8px;
+}
+
+.listsPrdct ul li
+{
+  background: transparent;
+  color: white;
+  border: 0px solid black;
+  font-size: 15px;
+  margin: 0px !important;
+}
+
+.listsPrdct ul li:hover
+{
+  /*background: rgb(290, 205, 255);*/
+  background: white;
+  color: black;
+}
+
+.listsPrdct ul a:hover
+{
+	text-decoration: none;
+}
+
+.listsPrdct ul li a
+{
+  color: white;
+  border: 0px solid black;
+  font-size: 15px;
+  margin: 0px !important;
+  text-decoration: none;
+}
+
+.listsPrdct ul
+{
+	padding-top: 8px;
+}
+
+.pincoulumn
+{
+	float: right;
+}
+
+.productsmodal
+{
+	width: 700px !important;
+}
+
+.catdropdown div
+{
+	margin-right: 8px;
+	margin-bottom: 5px;
+}
+
+.catdropdown
+{
+	padding: 10px 0px;
+	border-top: 1px solid grey;
+}
+
+.managesettings
+{
+	background: cyan;
+	padding: 4px 6px;
+	border: 1px solid black;
+	margin-top: -5px;
+	border-radius: 5px;
+}
+
+.managesettings span 
+{
+	color: darkred;
+}
