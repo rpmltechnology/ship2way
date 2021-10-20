@@ -1,0 +1,205 @@
+<!DOCTYPLE html>
+<html>
+<head>
+<title>Preset Groups</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="../ShipStation.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-default n1">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Onboard.html"><svg width="100" height="100">
+  <img src="../ship2way1.png" style="height :58.5px; margin-top: -123.5px; margin-left: -15px;" >
+</svg></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navb navbar-nav navbar-right">
+        <li class="nl"><a href="../Onboard.html">Onboard</a></li>
+<li class="nl"><a href="../Insights/overview.html">Insights</a></li>
+<li class="nl"><a href="../Orders/awaiting_payment.html">Orders</a></li>
+<li class="nl"><a href="../Shipments/shipped.html">Shipments</a></li>
+<li class="nlprodct"><a href="../Products/products.html">Online Shopping Portal</a></li>
+<li class="nlcustomers"><a href="#">Customers</a></li>
+<li class="nlscan"><a href="#">Scan</a></li>
+<li class="dropdown nlmore">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">More <span class="caret"></span></a>
+          <ul class="drpd dropdown-menu">
+            <li class="nlprodctli"><a href="../Products/products.html">Online Shopping Portal</a></li>
+            <li class="nlcustomersli"><a href="#">Customers</a></li>
+            <li class="nl"><a href="#">Scan</a></li>
+          </ul>
+        </li>
+        <li class="nl"><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="listsPrdct col-lg-2">
+  <ul class="list-group" id="myList">
+  <input class="search form-control" id="myInput" type="text" placeholder="Search..">
+    <a href="products.html"><li class="list-group-item"><img src="../icons/received.png" style="height :18px;"> Products</li></a>
+    <a href="preset_groups.html"><li class="list-group-item"><img src="../icons/group.png" style="height :18px;"> Preset Groups</li></a>
+    <a href="reporting_cat.html"><li class="list-group-item"><img src="../icons/report.png" style="height :18px;"> Reporting Categories</li></a>
+    <a href="inventory.html"><li class="list-group-item"><img src="../icons/stock.png" style="height :18px;"> Inventory</li></a>
+  </ul>
+</div>
+
+<div class="main col-lg-10">
+  <h4>Preset Groups</h4>
+
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Add Preset Group
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Categorize
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Tag
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Import
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+
+<button class="btn btn-primary">Export</button>
+<button type="button" class="btn btn-primary disabled">Deactivate</button>
+<button type="button" class="btn btn-primary disabled">Delete</button>
+
+<button class="btn btn-primary" data-toggle="modal" data-target="#md">New Product</button>
+<div id="md" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal">x</button>
+<h4 class="modal-title">Standalone Product Detail</h4>
+</div>
+<div class="modal-body">
+
+<div class="container">
+  <form class="form-inline" action="">
+    <div class="form-group">
+      <label>Name*</label><br>
+      <input class="form-control">
+    </div>
+    <div class="form-group">
+      <label>SKU*</label><br>
+      <input class="form-control">
+    </div>
+    <div class="checkbox">
+    <label><input type="checkbox"> Imported name</label>
+  </div>
+  </form>
+</div>
+
+<div class="container-fluid">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">Menu 1</a></li>
+    <li><a href="#">Menu 2</a></li>
+    <li><a href="#">Menu 3</a></li>
+  </ul>
+</div>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-success btn-sm" data-dismiss="modal">save</button>
+</div>
+</div>
+</div>
+</div>
+
+<button type="button" class="btn btn-primary disabled">Combine</button>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th><input class="thcheckbox" type="checkbox" value=""></th>
+        <th>Filter By</th>
+        <th>Tag</th>
+        <th>Preset Group(s)</th>
+        <th>Product Type</th>
+        <th>Created at</th>
+        <th>Modifided at</th>
+        <th>Image Url</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" value=""></td>
+        <td>Trident</td>
+        <td>Internet Explorer 4.0</td>
+        <td>Win 95+</td>
+        <td>Ab</td>
+        <td>X</td>
+        <td>Y</td>
+        <td>Z</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" value=""></td>
+        <td>Trident</td>
+        <td>Internet Explorer 4.0</td>
+        <td>Win 95+</td>
+        <td>Ab</td>
+        <td>X</td>
+        <td>Y</td>
+        <td>Z</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" value=""></td>
+        <td>Trident</td>
+        <td>Internet Explorer 4.0</td>
+        <td>Win 95+</td>
+        <td>Ab</td>
+        <td>X</td>
+        <td>Y</td>
+        <td>Z</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+
+</body>
+</html>

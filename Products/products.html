@@ -1,0 +1,787 @@
+<!DOCTYPLE html>
+<html>
+<head>
+<title>Products</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	   <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="../ShipStation.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-default n1">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Onboard.html"><svg width="100" height="100">
+  <img src="../ship2way1.png" style="height :58.5px; margin-top: -123.5px; margin-left: -15px;" >
+</svg></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navb navbar-nav navbar-right">
+        <li class="nl"><a href="../Onboard.html">Onboard</a></li>
+<li class="nl"><a href="../Insights/overview.html">Insights</a></li>
+<li class="nl"><a href="../Orders/awaiting_payment.html">Orders</a></li>
+<li class="nl"><a href="../Shipments/shipped.html">Shipments</a></li>
+<li class="nlprodct"><a href="../Products/products.html">Online Shopping Portal</a></li>
+<li class="nlcustomers"><a href="#">Customers</a></li>
+<li class="nlscan"><a href="#">Scan</a></li>
+<li class="dropdown nlmore">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">More <span class="caret"></span></a>
+          <ul class="drpd dropdown-menu">
+            <li class="nlprodctli"><a href="../Products/products.html">Online Shopping Portal</a></li>
+            <li class="nlcustomersli"><a href="#">Customers</a></li>
+            <li class="nl"><a href="#">Scan</a></li>
+          </ul>
+        </li>
+        <li class="nl"><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="listsPrdct col-lg-2">
+  <ul class="list-group" id="myList">
+  <input class="search form-control" id="myInput" type="text" placeholder="Search..">
+    <a href="products.html"><li class="list-group-item"><img src="../icons/received.png" style="height :18px;"> Products</li></a>
+    <a href="preset_groups.html"><li class="list-group-item"><img src="../icons/group.png" style="height :18px;"> Preset Groups</li></a>
+    <a href="reporting_cat.html"><li class="list-group-item"><img src="../icons/report.png" style="height :18px;"> Reporting Categories</li></a>
+    <a href="inventory.html"><li class="list-group-item"><img src="../icons/stock.png" style="height :18px;"> Inventory</li></a>
+  </ul>
+</div>
+
+<div class="main col-lg-10">
+
+    <div>
+      <h4 style="margin-bottom: 25px;">Products
+
+    <div class="btn-group" style="float: right;">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="modal" data-target="#">Layout</a>
+  	<span class="caret"></span></button>
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="modal" data-target="#clm">Columns
+  <span class="caret"></span></a></button>
+ 
+  <div id="clm" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal">x</button>
+<h4 class="modal-title"> Manage Columns</h4>
+</div>
+<div class="modal-body">
+
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Alert</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>SKU</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Name</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Warehouse Name</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Warehouse Location</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>On Hand</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Allocated</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Available</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Active</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Parent SKU</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Recorder Threshold</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Tracked</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Product Type</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Actions</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  
+</div>
+<div class="modal-footer">
+<button class="btn btn-success btn-sm" data-dismiss="modal">Cancel</button>
+<button class="btn btn-primary btn-sm" data-dismiss="modal">Save Columns</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</h4>
+</div>
+
+<div>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Tag
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Apply Preset Group
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Categorize
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+
+<button type="button" class="btn btn-primary disabled">Deactivate</button>
+
+<div class="btn-group">
+    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#ip">Import</button>
+    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#">Export</button>
+</div>
+
+    <div id="ip" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal">x</button>
+<h4 class="modal-title">Product Import</h4>
+</div>
+<div class="modal-body">
+
+  <br>
+  <p>If you'd like to import product information from a spreadsheet or other datasource, you can provide your data in our standard CSV file format. As products are imported we will create products that do not already exist and optionally update existing products.</p>
+
+  <a href="#">Download a sample CSV file</a><br><br>
+  <span><b>1. Select a File to Import</b></span><br><br>
+  <input type="file" name="" value="Select file"><br>
+  <span><b>2. Select Options</b></span><br><br>
+  <p>As products are imported, we will attempt to identify whether they already exist. You can select which field uniquely identifies a product.</p>
+  <div class="radio">
+    <label><input type="radio" name="identify" checked> Identify products uniquely by <b>SKU</b></label>
+  </div>
+  <div class="radio">  
+  <label><input type="radio" name="identify"> Identify products uniquely by <b>Name</b></label>
+  </div>
+  <p>You can choose to update products if they already exist or to only import new products.</p>
+  <div class="radio">
+    <label><input type="radio" name="exist" checked> Update product information if the products already exist</label>
+  </div>
+  <div class="radio">  
+   <label><input type="radio" name="exist"> Ignore any products that already exist (only new products will be imported)</label>
+  </div>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-success btn-sm" data-dismiss="modal">Cancel</button>
+<button class="btn btn-primary btn-sm" data-dismiss="modal">Import</button>
+</div>
+</div>
+</div>
+</div>
+
+<button type="button" class="btn btn-primary disabled">Combine</button>
+
+<button class="btn btn-primary" data-toggle="modal" data-target="#md">New Product</button>
+<div id="md" class="modal fade" role="dialog">
+<div class="modal-dialog" style="width:50%;">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal">x</button>
+<h4 class="modal-title">Standalone Product Detail</h4>
+</div>
+<div class="modal-body">
+
+
+  <form class="gen" action="">
+  <div cl
+    <div class="">
+      <label>Name<mark>*</mark></label><br>
+      <input class="control-shi">
+    </div>
+    <div class="">
+      <label>SKU<mark>*</mark></label><br>
+      <input class="control-shi">
+    </div>
+  </form>
+   <div class="checkbox">
+    <label><input type="checkbox">Override Imported name</label>
+  </div>
+
+
+
+<div class="container-fluid">
+  <ul class="nav nav-tabs change">
+    <li class="active"><a href="#" id="button1" onclick="change()" clicked>General</a></li>
+    <li><a href="#" onclick="shipping()"> Shipping</a></li>
+    <li><a href="#" onclick="customs()">Customs</a></li>
+	
+		
+			<div class="activeopen">
+			<input type="checkbox" name="checkbox-ff" id="checkbox-ff" value="" checked>
+			<label for="checkbox-dd">
+			<span class="label-text">Active</span>
+			</label>
+
+			</div>
+   
+  </ul>
+
+</div>
+  
+	
+  
+
+<div id="shiped">
+</div>
+<script>
+var selector = '.change li';
+
+$(selector).on('click', function(){
+    $(selector).removeClass('active');
+    $(this).addClass('active');
+});
+
+</script>
+
+<script>
+
+function change() {
+	document.getElementById("shiped").innerHTML = `
+			<div class="att" >
+			<h5>Attributes</h5>
+			</div>
+			<div class="cont" style="margin-top: 15px;">
+			<div class="general">
+			
+				<div class="col-6">
+				<lable>Description</label>
+					<div class="form-group">
+							
+							<input type="text" placeholder="" class="control">
+					</div>
+					
+					<lable>Image URL</label>
+					<div class="form-group">
+							
+							<input type="text" placeholder="" class="control-shi">
+							<span style="font-size:9px;">Supply an image url to override the image provided by the marketplace.</span>
+					</div>
+				</div>
+				
+				<div class="col-6">
+				<label>Reporting Category</label>
+				<div class="form-group">
+				<select class="control-shi">
+						<option value="">fff</option>
+						<option value="">ddd</option>
+						<option value="">sss</option>
+					
+						</select>
+				</div>		
+				
+				<label>Order Tags</label>
+				<div class="form-group">
+				<select class="control-shi">
+						<option value="" hidden></option>
+						<option value="">gg</option>
+						<option value="">aa</option>
+						
+					
+						</select>
+				</div>		
+						
+						<lable>UPC</label>
+						<div class="form-group">
+							
+							<input type="text" placeholder="" class="control-shi">
+					</div>
+					
+					<div class="ret">
+					Returnable
+					</div>
+					<div class="checkbox-r">
+						<input type="checkbox" name="checkbox" id="checkbox" value="">
+						
+						<span class="label-text" style="font-size:11px;">Product is returnable</span>
+						
+					</div>
+				
+				</div>
+			
+			
+			</div>
+			</div>
+		`;
+}
+</script>
+
+
+<script>
+function shipping() {
+  document.getElementById("shiped").innerHTML = `<div class="att" style="margin-top:0;">
+			<h5 style="margin-top:20px;">Shipping Defaults</h5>
+				<div class="dropdown" style="margin-left:auto;">
+    <button class="btn btn-primary dropdown-toggle" style="    color: black;border: 1px solid black;background-color: transparent;" type="button" data-toggle="dropdown">None<span style="margin-left: 8px;" class="caret"></span></button>
+    <ul class="dropdown-menu" style="min-width:0;">
+      <li><a href="#">None</a></li>
+     
+    </ul>
+</div>
+			</div>
+				<p style="font-size:12px;">The following options will only apply to shipments containing quantity 1 of this product.</p>
+			<div class="cont" style="margin-top: 15px;">
+			<div class="gen-option">
+			
+				<div class="col-4">
+				
+					<div class="form-group">
+							
+						<select name="owner" id="owner" class="control-shi owner">
+							 <option value="-1" selected="selected">Default</option>
+							<option value="1">USPC First Class Mall</option>
+							<option value="2">USPC Media Mall</option>
+							<option value="3">USPC Mall</option>
+						</select> 
+						</div>
+				</div>
+			
+			
+				<div class="col-4">
+					<div class="form-group">
+						<select name="ownermidd" class="control-shi owner-midd" id="ownermidd" >
+						 <option value="-1" selected="selected">Default</option>
+							<option value="1">Package</option>
+							<option value="2">Cubic</option>
+							<option value="3">Letter</option>
+							
+						</select> 
+
+
+					</div>
+				</div>
+				
+			
+				<div class="col-4">
+					<div class="form-group">
+						<select name="owner-sub" class="control-shi owner-sub">
+							<option value="">None</option>
+							<option value="1">Delivery</option>
+							<option value="2">No Confirmation</option>
+							<option value="3">Signature</option>
+						</select> 
+
+
+					</div>
+				</div>
+			
+			
+				<div class="col-4">
+					<div class="form-group">
+						<select name="service" class="control-shi">
+							<option value="">Internat</option>
+							<option value="1">USPC First Class Mall</option>
+							<option value="2">USPC Media Mall</option>
+							<option value="3">USPC Mall</option>
+						</select> 
+
+
+					</div>
+				</div>
+			
+			
+				<div class="col-4">
+					<div class="form-group">
+						<select name="serv-midd" class="control-shi">
+							<option value="">Select an Owner</option>
+							<option value="1">USPC First Class Mall</option>
+							<option value="2">USPC Media Mall</option>
+							<option value="3">USPC Mall</option>
+						</select> 
+
+
+					</div>
+				</div>
+			
+			
+				<div class="col-4">
+					<div class="form-group">
+						<select name="serv-sub" class="control-shi">
+							<option value="">Select an Owner</option>
+							<option value="1">USPC First Class Mall</option>
+							<option value="2">USPC Media Mall</option>
+							<option value="3">USPC Mall</option>
+						</select> 
+
+
+					</div>
+				</div>
+			</div>	
+				
+				<div class="pac" style="margin-top: 10px;display: grid;grid-template-columns: 50% 50%;">
+				<div class="col-6">
+					<label>Package weight</label>
+					<div class="form-group" style="display:flex;">
+							<div class="col-3 df">
+									<input type="number" placeholder="" class="p-weight">
+									<p class="pw">(lb)</p>
+									<input type="number" placeholder="" class="p-weight">
+									<p class="pw">(oz)</p>
+							</div>		
+					</div>
+					
+					<label>Package dimensions</label>
+					<div class="form-group" style="display:flex;">
+							<div class="col-3 df">
+									<input type="number" placeholder="" class="pd-weight">
+									<p class="pw">L</p>
+									<input type="number" placeholder="" class="pd-weight">
+									<p class="pw">W</p>
+									<input type="number" placeholder="" class="pd-weight">
+									<p class="pw">H (in)</p>
+							</div>		
+					</div>
+				</div>
+				
+				
+				
+				
+				
+				
+				<div class="col-6">
+						<lable>Warehouse location</label>
+					<div class="form-group">
+							<input type="text" placeholder="" class="control-shi">
+					</div>
+					
+					
+					<lable>Fulfillment SKU</label>
+					<div class="form-group">
+							<input type="text" placeholder="" class="control-shi">
+					</div>
+					
+				
+				</div>
+				
+			</div>
+			
+			</div>
+		`;
+}
+</script>
+
+
+
+ 
+
+<script>
+function customs() {
+  document.getElementById("shiped").innerHTML = `<div class="att" >
+			<h5>Default Customs Declarations</h5>
+			
+			</div>
+			<span style="font-size:12px;">The following options will be used to create customs declarations for international shipments that contain this product.</span>
+			<div class="pair">
+			<div class="leftside">Customs Declarations</div>
+			<div class="checkbox-customs">
+			<input type="checkbox" name="check" id="checkbox-tt" value="">
+			
+			<label for="checkbox-gh">
+			<span class="labelcreate"style="font-size:12px;">Do not create for products using this preset group</span>
+			</label>
+			</div>
+			</div>
+			
+			<div class="cont">
+			<div class="general">
+			
+				<div class="col-6">
+				<lable>Description</label>
+					<div class="form-group">
+							<input type="text" placeholder="" class="control-shi">
+					</div>
+					
+					<lable>Declared Value</label>
+					<div class="form-group" style="position:relative;">
+							<span style="position: absolute;top: 7px;left: 4px;">$</span><input type="text" placeholder="" class="control-shi">
+					</div>
+					
+					<lable>Harmonization Code</label>
+					<div class="form-group">
+							<input type="text" placeholder="" class="control-shi">
+					</div>
+					
+					<label>Origin Country</label>
+						<div class="form-group">
+						<select class="control-shi">
+						<option value="" >United States</option>
+								<option value="Afghanistan">Afghanistan</option>
+								<option value="Albania">Albania</option>
+								<option value="Algeria">Algeria</option>
+								<option value="American Samoa">American Samoa</option>
+					
+						</select>
+				</div>	
+					
+				</div>
+			</div>
+			</div>
+		`;
+}
+</script>
+
+
+
+
+
+
+</div>
+<div class="modal-footer">
+
+<div class="checkbox-open">
+<input type="checkbox" name="checkbox-ff" id="checkbox-ff" value="">
+<label for="checkbox-dd">
+<span class="label-text">Apply changes to open orders</span>
+</label>
+
+<button class="button" data-dismiss="modal" type="button">Cancel</button>
+<button class="btn btn-success btn-sm" data-dismiss="modal">Save</button>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="catdropdown">
+
+	<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Filter By:</div>
+</div>
+
+	<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Tag
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li class="disabled"><a href="#">Remove filters</a></li>
+    <li>
+    	<div class="checkbox" style="margin-left: 20px;">
+  <label><input type="checkbox" value="">qqq</label>
+</div>
+    </li>
+    <li>
+    	<div class="checkbox" style="margin-left: 20px;">
+  <label><input type="checkbox" value="">New tag</label>
+</div>
+    </li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Preset Group
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li class="disabled"><a href="#">Remove filters</a></li>
+    <li>
+    	<div class="checkbox" style="margin-left: 20px;">
+  <label><input type="checkbox" value="">qqq</label>
+</div>
+    </li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Product Type
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li class="disabled"><a href="#">Remove filters</a></li>
+    <li>
+    	<div class="checkbox" style="margin-left: 20px;">
+  <label><input type="checkbox" value="">Standalone</label>
+</div>
+    </li>
+    <li>
+    	<div class="checkbox" style="margin-left: 20px;">
+  <label><input type="checkbox" value="">Parent</label>
+</div>
+    </li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Category
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li class="disabled"><a href="#">Remove filters</a></li>
+    <li>
+    	<div class="checkbox" style="margin-left: 20px;">
+  <label><input type="checkbox" value="">fff</label>
+</div>
+    </li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Created
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu" style="height: 300px; overflow: auto; width: 200px;">
+    <li class="active"><a>Today</a></li>
+    <li><a>Yesterday</a></li>
+    <li><a>In the Last 7 Days</a></li>
+    <li><a>In the Last 30 Days</a></li>
+    <li><a>This Month</a></li>
+    <li><a>Last Month</a></li>
+    <li><a>Within the Past X Days</a></li>
+    <li><a>Within the Next X Days</a></li>
+    <li><a>X Days Ago or More</a></li>
+    <li><a>X Days Ahead or More</a></li>
+    <li><a>On or Before</a></li>
+    <li><a>On or After</a></li>
+    <li><a>Custom Range</a></li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Modified Date
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li><a>Never Modified</a></li>
+    <li class="active"><a>Today</a></li>
+    <li><a>Yesterday</a></li>
+    <li><a>In the Last 7 Days</a></li>
+    <li><a>In the Last 30 Days</a></li>
+    <li><a>This Month</a></li>
+    <li><a>Last Month</a></li>
+    <li><a>Within the Past X Days</a></li>
+    <li><a>Within the Next X Days</a></li>
+    <li><a>X Days Ago or More</a></li>
+    <li><a>X Days Ahead or More</a></li>
+    <li><a>On or Before</a></li>
+    <li><a>On or After</a></li>
+    <li><a>Custom Range</a></li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Image URL
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li>
+    	<div class="radio" style="margin-left: 20px;">
+  <label><input type="radio" value="">Has Image URL</label>
+</div>
+    </li>
+    <li>
+    	<div class="radio" style="margin-left: 20px;">
+  <label><input type="radio" value="">No Image URL</label>
+</div>
+    </li>
+  </ul>
+</div>
+
+<div class="checkbox" style="float: right; margin-top: 0px;">
+  <label><input type="checkbox" value="">Show Inactive Products</label>
+</div>
+	
+</div>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th><input class="thcheckbox" type="checkbox" value=""></th>
+        <th>Filter By</th>
+        <th>Tag</th>
+        <th>Preset Group(s)</th>
+        <th>Product Type</th>
+        <th>Created at</th>
+        <th>Modifided at</th>
+        <th>Image Url</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" value=""></td>
+        <td>Trident</td>
+        <td>Internet Explorer 4.0</td>
+        <td>Win 95+</td>
+        <td>Ab</td>
+        <td>X</td>
+        <td>Y</td>
+        <td>Z</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" value=""></td>
+        <td>Trident</td>
+        <td>Internet Explorer 4.0</td>
+        <td>Win 95+</td>
+        <td>Ab</td>
+        <td>X</td>
+        <td>Y</td>
+        <td>Z</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" value=""></td>
+        <td>Trident</td>
+        <td>Internet Explorer 4.0</td>
+        <td>Win 95+</td>
+        <td>Ab</td>
+        <td>X</td>
+        <td>Y</td>
+        <td>Z</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

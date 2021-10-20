@@ -1,0 +1,353 @@
+<!DOCTYPLE html>
+<html>
+<head>
+<title>Inventory</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="../ShipStation.css">
+
+</head>
+<style>
+  .btn-info{
+    background-color: white;
+    color: black;
+    width: 550px;
+    text-align: left;
+
+  }
+  .btn-primary a{
+    color: white;
+  }
+  
+</style>
+<body>
+
+<nav class="navbar navbar-default n1">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Onboard.html"><svg width="100" height="100">
+  <img src="../ship2way1.png" style="height :58.5px; margin-top: -123.5px; margin-left: -15px;" >
+</svg></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navb navbar-nav navbar-right">
+        <li class="nl"><a href="../Onboard.html">Onboard</a></li>
+<li class="nl"><a href="../Insights/overview.html">Insights</a></li>
+<li class="nl"><a href="../Orders/awaiting_payment.html">Orders</a></li>
+<li class="nl"><a href="../Shipments/shipped.html">Shipments</a></li>
+<li class="nlprodct"><a href="../Products/products.html">Online Shopping Portal</a></li>
+<li class="nlcustomers"><a href="#">Customers</a></li>
+<li class="nlscan"><a href="#">Scan</a></li>
+<li class="dropdown nlmore">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">More <span class="caret"></span></a>
+          <ul class="drpd dropdown-menu">
+            <li class="nlprodctli"><a href="../Products/products.html">Online Shopping Portal</a></li>
+            <li class="nlcustomersli"><a href="#">Customers</a></li>
+            <li class="nl"><a href="#">Scan</a></li>
+          </ul>
+        </li>
+        <li class="nl"><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="listsPrdct col-lg-2">
+  <ul class="list-group" id="myList">
+  <input class="search form-control" id="myInput" type="text" placeholder="Search..">
+    <a href="products.html"><li class="list-group-item"><img src="../icons/received.png" style="height :18px;"> Products</li></a>
+    <a href="preset_groups.html"><li class="list-group-item"><img src="../icons/group.png" style="height :18px;"> Preset Groups</li></a>
+    <a href="reporting_cat.html"><li class="list-group-item"><img src="../icons/report.png" style="height :18px;"> Reporting Categories</li></a>
+    <a href="inventory.html"><li class="list-group-item"><img src="../icons/stock.png" style="height :18px;"> Inventory</li></a>
+  </ul>
+</div>
+
+<div class="main col-lg-10">
+	
+    <div>
+      <h4 style="margin-bottom: 25px;">Inventory
+        <div class="dropdown" style="float: right;">
+  <button class="btn btn-grey dropdown-toggle" type="button" data-toggle="modal" data-target="#clm">Columns
+  <span class="caret"></span></a></button>
+ 
+  <div id="clm" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal">x</button>
+<h4 class="modal-title"> Manage Columns</h4>
+</div>
+<div class="modal-body">
+
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Alert</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>SKU</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Name</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Warehouse Name</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Warehouse Location</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>On Hand</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Allocated</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Available</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Active</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Parent SKU</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Recorder Threshold</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Tracked</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Product Type</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="" checked>Actions</label>
+    <a href="#" class="pincoulumn">Pin Column</a>
+  </div>
+  
+</div>
+<div class="modal-footer">
+<button class="btn btn-success btn-sm" data-dismiss="modal">Cancel</button>
+<button class="btn btn-primary btn-sm" data-dismiss="modal">Save Columns</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+      </h4>
+    </div>
+
+    <div>
+
+      <div class="btn-group">
+  <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#ip">Import</a></button>
+  <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#ep">Export</a></button>
+</div>
+
+<div id="ip" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal">x</button>
+<h4 class="modal-title"> Import Inventory</h4>
+</div>
+<div class="modal-body">
+
+<br>
+<p>If you'd like to import inventory information from a spreadsheet or other datasource, you can provide your data in our standard CSV file format.</p>
+
+<a href="#">Download a sample CSV file</a><br><br>
+<span><b>1. Select a File to Import</b></span><br><br>
+<input type="file" name="" value="Select file"><br>
+<span><b>2. Select Warehouse to Apply Import to</b></span><br><br>
+<div class="form-group">
+<select class="form-control">
+<option>Inventory Warehouse</option>
+</select>
+</div>
+  
+  <div class="checkbox">
+    <label><input type="checkbox" id="testmode" name="testmode"> Test Mode</label>
+  </div>
+
+  <p><b>If checked, an import summary will be displayed once complete but no records will be modified.</b></p>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-success btn-sm" data-dismiss="modal">Cancel</button>
+<button class="btn btn-primary btn-sm" data-dismiss="modal">Import</button>
+</div>
+</div>
+</div>
+</div>
+
+<div id="ep" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal">x</button>
+<h4 class="modal-title"> Export Inventory</h4>
+</div>
+<div class="modal-body">
+
+<h4><b>Which records would you like to export?</b></h4>
+<div style="border-bottom: 1px solid skyblue; width: 100%;"></div>
+<br>
+  <div class="radio">
+  <label><input type="radio" name="export" checked>Export all active Standalone and Variant products with or without inventory.</label>
+</div>
+<div class="radio"><br>
+  <label><input type="radio" name="export">Only export products with inventory from this warehouse</label>
+</div>
+<div class="form-group">
+<select class="form-control">
+<option>Inventory Warehouse</option>
+</select>
+</div>
+  
+</div>
+<div class="modal-footer">
+<button class="btn btn-success btn-sm" data-dismiss="modal">Cancel</button>
+<button class="btn btn-primary btn-sm" data-dismiss="modal">Export</button>
+</div>
+</div>
+</div>
+</div>
+      
+    </div>
+
+    <div class="catdropdown">
+
+      <div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Filter By:</div>
+</div>
+
+  <div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Alerts
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li class="disabled"><a href="#">Remove filters</a></li>
+    <li>
+      <div class="checkbox" style="margin-left: 20px;">
+  <label><input type="checkbox" value="">No Alerts</label>
+</div>
+    </li>
+    <li>
+      <div class="checkbox" style="margin-left: 20px;">
+  <label><input type="checkbox" value="">Recorder Threshold Met</label>
+</div>
+    </li>
+    <li>
+      <div class="checkbox" style="margin-left: 20px;">
+  <label><input type="checkbox" value="">No Inventory</label>
+</div>
+    </li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Created
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu" style="height: 300px; overflow: auto; width: 200px;">
+    <li class="active"><a>Today</a></li>
+    <li><a>Yesterday</a></li>
+    <li><a>In the Last 7 Days</a></li>
+    <li><a>In the Last 30 Days</a></li>
+    <li><a>This Month</a></li>
+    <li><a>Last Month</a></li>
+    <li><a>Within the Past X Days</a></li>
+    <li><a>Within the Next X Days</a></li>
+    <li><a>X Days Ago or More</a></li>
+    <li><a>X Days Ahead or More</a></li>
+    <li><a>On or Before</a></li>
+    <li><a>On or After</a></li>
+    <li><a>Custom Range</a></li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <div class=" dropdown-toggle" type="button" data-toggle="dropdown">Tracked
+  <span class="caret"></span></div>
+  <ul class="dropdown-menu">
+    <li class="disabled"><a href="#">Remove filters</a></li>
+    <li>
+      <div class="checkbox" style="margin-left: 20px;">
+  <label><input type="checkbox" value="">Tracked</label>
+</div>
+    </li>
+    <li>
+      <div class="checkbox" style="margin-left: 20px;">
+  <label><input type="checkbox" value="">No Tracked</label>
+</div>
+    </li>
+  </ul>
+</div>
+
+<div class="checkbox" style="float: right; margin-top: 0px;">
+  <div class="managesettings"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <span>Inventory tracking is not currently enabled...</span> <a href="#">Manage Settings</a></div>
+</div>
+
+<div class="checkbox" style="float: right; margin-top: 0px;">
+  <label><input type="checkbox" value="">Show Inactive Products</label>
+</div>
+      
+    </div>
+
+    <div class="table-responsive">
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th><input class="thcheckbox" type="checkbox" value=""></th>
+        <th>Alerts</th>
+        <th><b>SKU</b></th>
+        <th>Name</th>
+        <th>Inventory Warehouse</th>
+        <th>Warehouse Locations</th>
+        <th>Stock</th>
+        <th>Allocated</th>
+        <th>Available</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" value=""></td>
+        <td></td>
+        <td>PROD-1</td>
+        <td>Product 1</td>
+        <td>Warehouse</td>
+        <td>(Unspecified)</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>+ - =</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+
+</body>
+</html>

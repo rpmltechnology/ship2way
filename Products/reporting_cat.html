@@ -1,0 +1,114 @@
+<!DOCTYPLE html>
+<html>
+<head>
+<title>Reporting Categories</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="../ShipStation.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-default n1">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Onboard.html"><svg width="100" height="100">
+  <img src="../ship2way1.png" style="height :58.5px; margin-top: -123.5px; margin-left: -15px;" >
+</svg></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navb navbar-nav navbar-right">
+        <li class="nl"><a href="../Onboard.html">Onboard</a></li>
+<li class="nl"><a href="../Insights/overview.html">Insights</a></li>
+<li class="nl"><a href="../Orders/awaiting_payment.html">Orders</a></li>
+<li class="nl"><a href="../Shipments/shipped.html">Shipments</a></li>
+<li class="nlprodct"><a href="../Products/products.html">Online Shopping Portal</a></li>
+<li class="nlcustomers"><a href="#">Customers</a></li>
+<li class="nlscan"><a href="#">Scan</a></li>
+<li class="dropdown nlmore">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">More <span class="caret"></span></a>
+          <ul class="drpd dropdown-menu">
+            <li class="nlprodctli"><a href="../Products/products.html">Online Shopping Portal</a></li>
+            <li class="nlcustomersli"><a href="#">Customers</a></li>
+            <li class="nl"><a href="#">Scan</a></li>
+          </ul>
+        </li>
+        <li class="nl"><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="listsPrdct col-lg-2">
+  <ul class="list-group" id="myList">
+  <input class="search form-control" id="myInput" type="text" placeholder="Search..">
+    <a href="products.html"><li class="list-group-item"><img src="../icons/received.png" style="height :18px;"> Products</li></a>
+    <a href="preset_groups.html"><li class="list-group-item"><img src="../icons/group.png" style="height :18px;"> Preset Groups</li></a>
+    <a href="reporting_cat.html"><li class="list-group-item"><img src="../icons/report.png" style="height :18px;"> Reporting Categories</li></a>
+    <a href="inventory.html"><li class="list-group-item"><img src="../icons/stock.png" style="height :18px;"> Inventory</li></a>
+  </ul>
+</div>
+
+<div class="main col-lg-10">
+  <h4>Reporting Categories</h4>
+
+  <div class="dropdown">
+    <button class="btn btn-grey dropdown-toggle" type="button" data-toggle="dropdown">Add Product Category  </button>
+    <div class="dropdown-menu" style="width: 280px; padding: 5px 10px; padding-bottom: 30px;">
+        <p>Add Product Category</p>
+      <input type="text" name="" style="width: 170px; margin-right: 5px;">
+      <button><span class="fa fa-check" aria-hidden="true" style="height: 15px; margin-top: 5px;"></span></button>
+      <button><span class="fa fa-ban" aria-hidden="true" style="height: 15px; margin-top: 5px;"></span></button>
+    </div>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th># of Products</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Trident</td>
+        <td>1</td>
+        <th>
+          <a href="#">Edit</a>
+          <a href="#">Delete</a>
+        </th>
+        </tr>
+      <tr>
+        <td>Trident</td>
+        <td>1</td>
+        <th>
+          <a href="#">Edit</a>
+          <a href="#">Delete</a>
+        </th>
+        </tr>
+      <tr>
+        <td>Trident</td>
+        <td>1</td>
+        <th>
+          <a href="#">Edit</a>
+          <a href="#">Delete</a>
+        </th>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
